@@ -30,7 +30,7 @@
       git
       tree
     ];
-    openssh.authorizedKeys.keys = [
+    openssh.authorizedKeys.keyFiles = [
       "${rootPath}/resources/keys/id_rsa.work.pub"
       "${rootPath}/resources/keys/id_rsa.home.pub"
     ];
