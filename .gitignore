@@ -1,1 +1,5 @@
-/result # Nix Build Test
+# Nix Build Test
+result
+
+# VSCode settings
+.vscode
