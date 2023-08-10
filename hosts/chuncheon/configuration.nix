@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/zsh.nix
+      ../../users/hua.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -20,21 +22,6 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";  
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.hua = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      glances
-      git
-      tree
-    ];
-    openssh.authorizedKeys.keyFiles = [
-      "${rootPath}/resources/keys/id_rsa.work.pub"
-      "${rootPath}/resources/keys/id_rsa.home.pub"
-    ];
-  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
