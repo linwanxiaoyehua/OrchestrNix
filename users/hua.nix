@@ -14,6 +14,7 @@
       docker
       tmux
       thefuck
+      vim
     ];
     openssh.authorizedKeys.keyFiles = [
       "${rootPath}/resources/keys/id_rsa.work.pub"

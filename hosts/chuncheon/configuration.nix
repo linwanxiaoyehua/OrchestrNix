@@ -10,6 +10,7 @@
     ../../modules/zsh.nix
     ../../users/hua.nix
     ../../modules/docker.nix
+    ../../modules/docker-network-bridge.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -17,6 +18,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "chuncheon"; # Define your hostname.
+  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
   # Pick only one of the below networking options.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
