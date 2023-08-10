@@ -5,12 +5,11 @@
 { config, lib, pkgs, rootPath, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../modules/zsh.nix
-      ../../users/hua.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../../modules/zsh.nix
+    ../../users/hua.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -21,7 +20,7 @@
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  time.timeZone = "Asia/Shanghai";  
+  time.timeZone = "Asia/Shanghai";
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
