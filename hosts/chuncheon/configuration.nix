@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ../../modules/zsh.nix
     ../../users/hua.nix
+    ../../modules/docker.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
