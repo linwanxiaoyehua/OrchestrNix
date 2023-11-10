@@ -31,6 +31,15 @@
           ./hosts/chuncheon/configuration.nix
         ];
       };
+      orchestr = lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit rootPath;
+        };
+        modules = [
+          ./hosts/orchestr/configuration.nix
+        ];
+      };
     };
   };
 }

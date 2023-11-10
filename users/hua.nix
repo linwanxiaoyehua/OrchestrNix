@@ -14,6 +14,7 @@
       docker
       tmux
       thefuck
+      nodejs_18
       vim
     ];
     openssh.authorizedKeys.keyFiles = [
